@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+body {font-family: 'Courgette', cursive;
+    background: lightblue;
+    background-image: url("blue-wallpaper-2680270.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+content {
+     grid-area: content ;
+
+}
+
+.topbar {
+    grid-area: topbar;
+    background: linear-gradient( right,
+    rgba(249,107,147,1),
+    rgba(218,103,230,1),
+    rgba(130,125,253,1));
+    justify-content: center;
+}
+
+footer {
+    grid-area: footer;
+
+}
+ 
+.container {
+    font-size: 1.5em;
+    width: 100%;
+    height: 150vh;
+    display: grid;
+    grid-template-areas: 
+    "topbar"
+    "content"
+    "footer";
+    grid-template-columns:1fr ;
+    grid-template-rows: 130px 1000px 250px;
+}
+content,
+.topbar,
+.footer {
+    padding: 1em;
+}
+
+nav ul {list-style-type: none;
+    display: flex;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    justify-content: space-between;
+    text-align: center;
+
+}
+nav li {
+    padding: 1em 0;
+    list-style: none;
+
+}
+nav li a {
+    display: block;
+    color: navy;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    opacity: 0.6;
+
+
+}
+nav li a:hover {
+    background-color: royalblue;
+
+}
+.noxy {
+    max-width: 960px;
+    margin: auto;
+    text-align: center;
+}
+.noxy img {
+    width: 200px;
+    align-content: center;
+}
+.noxy h1 {
+    font-size: 80px;
+    font-weight: 300;
+    color: purple;
+}
+.noxy p {
+    font-weight: 300;
+    line-height: 1.5em;
+    color:plum;
+
+}
+.noxy h2 {
+    font-size: 40px;
+    color: purple;
+}
+.footer {
+    max-width: 640px;
+    
+    
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+    background: #2b5998;
+    color: white;
+}
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+@media (min-width: 1040px) {.container
+  {  grid-template-areas: 
+    ".topbar ::content"
+    ".topbar ::footer";
+    grid-template-columns:200px auto;
+    grid-template-rows: 1fr ;
+
+}
+.footer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+nav ul {display: flex;
+justify-content: center;
+flex-direction: column;
+}
+.topbar {
+    background: linear-gradient(
+        rgba(249,107,142,1),
+        rgba(218,103,230,1),
+        rgba(130,125,254,1));
+        padding-top: 3em;
+        justify-content: center;
+}
+.noxy {
+    text-align: left;
+    margin: 2em auto;
+}
+img {
+    width: 250px;
+    align-items: center;
+}
+h1 {
+    font-size: 3em;
+}
+p {
+    width: 60%;
+}
+
+.fa {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+}
+.footer script {
+
+}
