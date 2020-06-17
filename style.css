@@ -35,8 +35,8 @@ footer {
     "topbar"
     "content"
     "footer";
-    grid-template-columns:1fr ;
-    grid-template-rows: 130px 1000px 250px;
+    grid-template-columns:auto ;
+    grid-template-rows: 130px 1200px 250px;
 }
 content,
 .topbar,
@@ -49,7 +49,6 @@ nav ul {list-style-type: none;
     font-size: 30px;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     justify-content: space-between;
     text-align: center;
 
@@ -75,12 +74,12 @@ nav li a:hover {
 }
 .noxy {
     max-width: 960px;
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
 }
 .noxy img {
     width: 200px;
-    align-content: center;
+    
 }
 .noxy h1 {
     font-size: 80px;
@@ -152,12 +151,13 @@ input[type=submit]:hover {
     ".topbar ::content"
     ".topbar ::footer";
     grid-template-columns:200px auto;
-    grid-template-rows: 1fr ;
+    grid-template-rows: 1fr 200px auto ;
 
 }
 .footer {
     grid-column-start: 1;
     grid-column-end: 3;
+
 }
 nav ul {display: flex;
 justify-content: center;
@@ -175,14 +175,14 @@ flex-direction: column;
     text-align: left;
     margin: 2em auto;
 }
-img {
-    width: 250px;
-    align-items: center;
+.noxy img {
+    width: 400px;
+   
 }
-h1 {
+.noxy h1 {
     font-size: 3em;
 }
-p {
+.noxy p {
     width: 60%;
 }
 
@@ -192,8 +192,5 @@ p {
     justify-content: center;
     
 }
-
-}
-.footer script {
 
 }
