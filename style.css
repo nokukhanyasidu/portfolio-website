@@ -2,12 +2,11 @@
 
 body {font-family: 'Courgette', cursive;
     margin: 0%;
-    padding: 0;
     width: 100%;
 }
 .topContent {
     grid-area: topContent;
-    background-image: url('background.jpg');
+    background-image: url('skillsBackground.jpg');
     background-attachment: fixed;
     
 }
@@ -16,31 +15,29 @@ body {font-family: 'Courgette', cursive;
 }
 .content {
     grid-area: content;
-    background-image: url('skillsBackground.jpg');
+    background-image: url('backgrounds.jpg');
     width: 100%;
 
+}
+.bottom {
+    grid-area: bottom;
 }
 
 .container {
     font-size: 1.5em;
-    width: 100%;
     height: 1300px;
     display: grid;
     grid-template-areas:
     "topContent"
     "main" 
     "content"
+    "bottom"
     "footer";
-    grid-template-columns: 1fr ;
+    grid-template-columns: auto ;
     grid-template-rows:200px, 500px, 200px, 250px, 130px;
     
 }
-.topContent,
-.main,
-.content,
-.footer {
-    padding: 1em;
-}
+
 nav ul {list-style-type: none;
     background-color: black;
     margin: 0;
@@ -99,9 +96,9 @@ h1{   animation: animated-text 4s steps(15,end) 1s 1 normal both;
     to{width: 100%;}
 }
 h2 {
-    font-size: 40px;
-    font-weight: 600;
-    color: whitesmoke;
+    font-size: 50px;
+    font-weight: 800;
+    color: black;
     font-family: 'Courier New';
     padding-top: 2em;
     overflow: hidden;
@@ -138,15 +135,19 @@ h3 {
     width: 200px;
     align-content: center;
     padding-left: 9em ;
+    padding-top: 2em;
+}
+.bottom {
+    text-align: center;
 }
 
 
 
-
 .footer {
-   
+   text-align: center;
     background-color: rgb(221, 221, 221);
     width:100%;
+    font-size: 20px ;
     
     
 }
@@ -161,8 +162,8 @@ h3 {
 .fa{
     padding-top: 1em;
     padding: 10px;
-    font-size: 15px;
-    width: 20px;
+    font-size: 5px;
+    width: 10px;
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
@@ -171,20 +172,20 @@ h3 {
     opacity: 0.7;
 }
 .fa-facebook {
-    background: #2b5998;
     color: white;
+background: grey;
 }
 .fa-instagram {
-    background: #125688;
     color: white;
+    background: grey;
 }
 .fa-linkedin {
-    background-color: #125688;
     color: white;
+    background: grey;
 }
 .fa-github {
-    background-color: #125688;
     color: white;
+    background: grey;
 }
 
 @media (min-width: 1040px) {.container
@@ -192,26 +193,17 @@ h3 {
     "topContent"
      "main"
     "content"
+    "bottom"
     "footer";
     grid-template-columns: 100% ;
     grid-template-rows: 1fr ;
 
    }
-nav ul {
-    top: 0;
-    font-size: 40px;
-}
-li {
-    float: left;
-    display: block;
-    text-align: left;
-    padding-top: 0;
-    padding-left: 0;
-}
 
 .footer {
     grid-column-start: 1;
     grid-column-end: 3;
+    align-content: center;
 }
 
 .main {
@@ -244,10 +236,11 @@ h2 {
 
 
 .fa {
-    display: block;
+    display: inline;
     justify-content: center;
    
 }
+
 
 
 }
