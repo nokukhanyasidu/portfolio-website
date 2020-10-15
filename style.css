@@ -4,9 +4,9 @@ body {font-family: 'Courgette', cursive;
     margin: 0%;
     width: 100%;
 }
-.topContent {
-    grid-area: topContent;
-    background-image: url('skillsBackground.jpg');
+.header {
+    grid-area: header;
+    background-image: url('images/skillsBackground.jpg');
     background-attachment: fixed;
     
 }
@@ -15,7 +15,7 @@ body {font-family: 'Courgette', cursive;
 }
 .content {
     grid-area: content;
-    background-image: url('backgrounds.jpg');
+    background-image: url('images/backgrounds.jpg');
     width: 100%;
 
 }
@@ -25,47 +25,69 @@ body {font-family: 'Courgette', cursive;
 
 .container {
     font-size: 1.5em;
+    width: auto;
     height: 1300px;
     display: grid;
     grid-template-areas:
-    "topContent"
+    "header"
     "main" 
     "content"
     "bottom"
     "footer";
     grid-template-columns: auto ;
     grid-template-rows:200px, 500px, 200px, 250px, 130px;
-    
+
 }
 
-nav ul {list-style-type: none;
+.nav  {
     background-color: black;
-    margin: 0;
-    padding: 0;
-    font-size: 30px ;
     overflow: hidden;
     position: fixed;
-    top: 0;
     width: 100%;
+}
 
-}
-nav li {
+.nav a {
     float: left;
-}
-nav li a {
     display: block;
     color: rgb(108, 68, 160);
     text-align: center;
-    padding: 10px;
+    padding: 10px 14px;
     text-decoration: none;
+    font-size: 40px;
+
 
 }
-nav li a:hover {
+.nav  a:hover {
     background-color: white;
    
-    
-
 }
+
+.nav a:not(:first-child){
+    display: none;
+}
+.nav a.icon{
+    display: block;
+    float: right;
+}
+.fa-bars{
+    color: rgb(108, 68, 160) ;
+}
+
+.nav.responsive {
+    position: relative;
+}
+.nav.responsive a.icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.nav.responsive a {
+    position: none;
+    display: inline;
+    text-align: left;
+}
+
+
 .main {
     margin: 0;
     text-align: center;
@@ -190,7 +212,7 @@ background: grey;
 
 @media (min-width: 1040px) {.container
   {  grid-template-areas: 
-    "topContent"
+    "header"
      "main"
     "content"
     "bottom"
@@ -199,7 +221,12 @@ background: grey;
     grid-template-rows: 1fr ;
 
    }
-
+.nav a.icon {
+    display: none;
+}
+.nav a:not(:first-child){
+    display: block;
+}
 .footer {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -233,14 +260,10 @@ h2 {
     width: 100%;
 }
 
-
-
 .fa {
     display: inline;
     justify-content: center;
    
 }
-
-
 
 }
