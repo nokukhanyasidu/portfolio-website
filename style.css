@@ -15,8 +15,9 @@ body {font-family: 'Courgette', cursive;
 }
 .content {
     grid-area: content;
-    background-image: url('images/backgrounds.jpg');
+  background-color: grey;
     width: 100%;
+  
 
 }
 .bottom {
@@ -62,29 +63,33 @@ body {font-family: 'Courgette', cursive;
    
 }
 
-.nav a:not(:first-child){
-    display: none;
-}
-.nav a.icon{
-    display: block;
-    float: right;
-}
-.fa-bars{
-    color: rgb(108, 68, 160) ;
-}
 
-.nav.responsive {
-    position: relative;
-}
-.nav.responsive a.icon{
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-.nav.responsive a {
-    position: none;
-    display: inline;
-    text-align: left;
+@media (min-width: 320px) and (max-width: 767px){
+    .nav a:not(:first-child){
+        display: none;
+    }
+    .nav a.icon{
+        display: block;
+        float: right;
+    }
+    .fa-bars{
+        color: rgb(108, 68, 160) ;
+    }
+    
+    .nav.responsive {
+        position: relative;
+    }
+    .nav.responsive a.icon{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .nav.responsive a {
+        position: none;
+        display: inline;
+        text-align: left;
+    }
+    
 }
 
 
@@ -164,7 +169,6 @@ h3 {
 }
 
 
-
 .footer {
    text-align: center;
     background-color: rgb(221, 221, 221);
@@ -210,7 +214,7 @@ background: grey;
     background: grey;
 }
 
-@media (min-width: 1040px) {.container
+@media (min-width: 768px) {.container
   {  grid-template-areas: 
     "header"
      "main"
@@ -218,15 +222,14 @@ background: grey;
     "bottom"
     "footer";
     grid-template-columns: 100% ;
-    grid-template-rows: 1fr ;
+    grid-template-rows: 45% ;
 
    }
-.nav a.icon {
+   .nav a.icon{
     display: none;
-}
-.nav a:not(:first-child){
-    display: block;
-}
+    
+}  
+
 .footer {
     grid-column-start: 1;
     grid-column-end: 3;
