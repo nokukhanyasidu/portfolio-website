@@ -6,42 +6,54 @@ body {font-family: 'Courgette', cursive;
 }
 .header {
     grid-area: header;
-    background-image: url('images/skillsBackground.jpg');
+    background-image: url('images/main_background.jpg');
     background-attachment: fixed;
-    
+    text-align: center;
 }
 .main {
     grid-area: main;
 }
 .content {
     grid-area: content;
-  background-color: grey;
-    width: 100%;
-  
+  background-color: #256D85;
 
+}
+.projects{
+    grid-area: projects;
+    background-color: white;
+    margin-top: 3em;
+   
 }
 .bottom {
     grid-area: bottom;
+    background-color: whitesmoke;
+
+}
+
+.footer{
+    grid-area: footer;
+
 }
 
 .container {
     font-size: 1.5em;
     width: auto;
-    height: 1300px;
+    height: 1550px;
     display: grid;
     grid-template-areas:
     "header"
     "main" 
     "content"
+    "projects"
     "bottom"
     "footer";
     grid-template-columns: auto ;
-    grid-template-rows:200px, 500px, 200px, 250px, 130px;
+    grid-template-rows: auto;
 
 }
 
 .nav  {
-    background-color: black;
+    background-color: #002B5B;
     overflow: hidden;
     position: fixed;
     width: 100%;
@@ -50,11 +62,12 @@ body {font-family: 'Courgette', cursive;
 .nav a {
     float: left;
     display: block;
-    color: rgb(108, 68, 160);
+    color: #8FE3CF;
     text-align: center;
     padding: 10px 14px;
     text-decoration: none;
     font-size: 40px;
+    font-family:  cursive;
 
 
 }
@@ -73,7 +86,7 @@ body {font-family: 'Courgette', cursive;
         float: right;
     }
     .fa-bars{
-        color: rgb(108, 68, 160) ;
+        color: #8FE3CF ;
     }
     
     .nav.responsive {
@@ -92,7 +105,9 @@ body {font-family: 'Courgette', cursive;
     
 }
 
-
+.projects h2{
+    color: #256D85;
+}
 .main {
     margin: 0;
     text-align: center;
@@ -108,9 +123,9 @@ body {font-family: 'Courgette', cursive;
 h1 {
     text-align: center;
     font-size: 50px;
-    color: rgb(165, 132, 184);
+    color: #2B4865;
     font-family:  cursive;
-    padding-top: 4em;
+    margin-top: 6em;
     padding-bottom: 0;
     overflow: hidden;
     white-space: nowrap;
@@ -125,19 +140,18 @@ h1{   animation: animated-text 4s steps(15,end) 1s 1 normal both;
 h2 {
     font-size: 50px;
     font-weight: 800;
-    color: black;
+    color: #8FE3CF;
     font-family: 'Courier New';
     padding-top: 2em;
     overflow: hidden;
     white-space: nowrap;
-    margin: 0 auto;
     text-align: center;
 }
 h3 {
     text-align: center;
     font-size: 50px;
     font-weight: 800;
-    color: white;
+    color: #256D85;
     font-family:  cursive;
     padding-top: 0;
     padding-bottom: 4em;
@@ -146,6 +160,11 @@ h3 {
     margin: 0 ;
 }
 
+h4 {
+    font-size: 50px;
+    color: #256D85;
+    font-family:  cursive;
+}
 .main p {
     font-weight: 300;
     line-height: 1.5em;
@@ -166,6 +185,7 @@ h3 {
 }
 .bottom {
     text-align: center;
+    width: auto;
 }
 
 
@@ -178,12 +198,25 @@ h3 {
     
 }
 .button {
-    color: white;
-    font-size: 20px;
+    font-size: 40px;
     display: inline-block;
     background-color: grey;
     cursor: pointer;
 
+}
+.bottom h3{
+    margin-top: 3em;
+}
+label{
+    text-align: right;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+textarea{
+    margin-top: 1em;
+    width: 300px;
+    height: 200px;
+ 
 }
 .fa{
     padding-top: 1em;
@@ -217,8 +250,9 @@ background: grey;
 @media (min-width: 768px) {.container
   {  grid-template-areas: 
     "header"
-     "main"
+    "main"
     "content"
+    "projects"
     "bottom"
     "footer";
     grid-template-columns: 100% ;
